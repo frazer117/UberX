@@ -10,10 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_29_155452) do
+ActiveRecord::Schema.define(version: 2022_02_01_195550) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.date "booking_start_date"
+    t.date "booking_end_date"
+    t.integer "group_size"
+    t.bigint "rocket_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["rocket_id"], name: "index_bookings_on_rocket_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "rockets", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.float "price"
+    t.integer "capacity"
+    t.integer "range"
+    t.integer "power"
+    t.boolean "is_available"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_rockets_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +52,8 @@ ActiveRecord::Schema.define(version: 2022_01_29_155452) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
+  add_foreign_key "bookings", "rockets"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "rockets", "users"
 end
