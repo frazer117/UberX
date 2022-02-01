@@ -1,4 +1,5 @@
 class RocketsController < ApplicationController
+before_action :set_rocket, only: [:show, :update, :edit, :destroy]
 
   def index
     @rockets = Rocket.all
@@ -14,6 +15,7 @@ class RocketsController < ApplicationController
 
   def create
     @rocket = Rocket.new(rocket_params)
+    @rocket.user = current_user
     if @rocket.save
       redirect_to rocket_path(@rocket)
     else
