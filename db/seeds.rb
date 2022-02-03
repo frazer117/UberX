@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Rocket.destroy_all
+
+user = User.create!(
+  email: 'frazer.gavin@gmail.com',
+  password: 'password-2021'
+)
+
+Rocket.create!(
+  name: 'Falcon 1',
+  user_id: user.id,
+  description: 'Reusable two-stage rocket ideal for quick weekend getaways to the Moon and Mars. Stylish interior and sleek exterior design. Also comes with home cinema and cupholders.',
+  price: 750000,
+  capacity: 4,
+  range: 400,
+  power: 75000,
+  is_available: true
+)
