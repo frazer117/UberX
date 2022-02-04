@@ -12,7 +12,7 @@ before_action :set_booking, only: [:destroy]
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.rocket = @rocket.find(params[:rocket_id])
+    @booking.rocket = @rocket
     @booking.user = current_user
     if @booking.save
       redirect_to booking_path(@booking)

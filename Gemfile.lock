@@ -124,8 +124,11 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.1-x86_64-darwin)
       racc (~> 1.4)
+<<<<<<< HEAD
     nokogiri (1.13.1-x86_64-linux)
       racc (~> 1.4)
+=======
+>>>>>>> dffa242656d05f8a6cf7afe9a9a0694826516d60
     orm_adapter (0.5.0)
     pg (1.3.0)
     pry (0.13.1)
@@ -241,8 +244,12 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+<<<<<<< HEAD
   x86_64-darwin-21
   x86_64-linux
+=======
+  x86_64-darwin-20
+>>>>>>> dffa242656d05f8a6cf7afe9a9a0694826516d60
 
 DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
@@ -274,4 +281,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.3.5
+   2.3.6
