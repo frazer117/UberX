@@ -12,13 +12,16 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", rockets_path, class: "nav-link" %>
+            <%= link_to "Home", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "All Rockets!", rockets_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Add Rocket", new_rocket_path(@rocket), class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <%= link_to "Bookings", bookings_path, class: "nav-link" %>
+            <%= link_to "My Account", bookings_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://www.shutterstock.com/image-vector/cute-astronaut-working-on-laptop-cartoon-1824301253", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
