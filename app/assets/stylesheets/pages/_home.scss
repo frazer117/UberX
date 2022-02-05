@@ -1,1 +1,27 @@
 // Specific CSS for your home-page
+
+.funny {
+  background-color: $white;
+  text-align: center;
+
+  &__heading {
+    font-size: 14px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: gray;
+    font-weight: 100;
+  }
+}
+
+.home-icons {
+  font-size: 30px;
+}
+
+.home-icon-cap {
+  height: 35px;
+
+}
