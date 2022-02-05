@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-before_action :set_rocket, only: [:new, :create]
+# before_action :set_rocket, only: [:new, :create]
 before_action :set_booking, only: [:destroy]
 
   def index
@@ -7,15 +7,17 @@ before_action :set_booking, only: [:destroy]
   end
 
   def new
+    @rocket = Rocket.find(params[:rocket_id])
     @booking = Booking.new
   end
 
   def create
+    @rocket = Rocket.find(params[:rocket_id])
     @booking = Booking.new(booking_params)
     @booking.rocket = @rocket
     @booking.user = current_user
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to bookings_path
     else
       render :new
     end
