@@ -10,17 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 0) do
-=======
-ActiveRecord::Schema.define(version: 2022_01_29_155452) do
->>>>>>> c2582f4f47d30045862b0de9ff3084db38591869
-=======
-=======
->>>>>>> a053b72052a46a45343100d82273316eea075307
-=======
->>>>>>> 76157777e5820d4e4a10ba3e4263f2e232434258
 ActiveRecord::Schema.define(version: 2022_02_01_195550) do
 
   # These are extensions that must be enabled in order to support this database
