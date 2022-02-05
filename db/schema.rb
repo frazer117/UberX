@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 0) do
 =======
 ActiveRecord::Schema.define(version: 2022_01_29_155452) do
 >>>>>>> c2582f4f47d30045862b0de9ff3084db38591869
 =======
+=======
+>>>>>>> a053b72052a46a45343100d82273316eea075307
 ActiveRecord::Schema.define(version: 2022_02_01_195550) do
->>>>>>> 4a6012a6e1bada510ab5a4f251a898c4b31d625d
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,7 +49,6 @@ ActiveRecord::Schema.define(version: 2022_02_01_195550) do
     t.index ["user_id"], name: "index_rockets_on_user_id"
   end
 
->>>>>>> 4a6012a6e1bada510ab5a4f251a898c4b31d625d
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -60,11 +61,7 @@ ActiveRecord::Schema.define(version: 2022_02_01_195550) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-<<<<<<< HEAD
->>>>>>> c2582f4f47d30045862b0de9ff3084db38591869
-=======
   add_foreign_key "bookings", "rockets"
   add_foreign_key "bookings", "users"
   add_foreign_key "rockets", "users"
->>>>>>> 4a6012a6e1bada510ab5a4f251a898c4b31d625d
 end

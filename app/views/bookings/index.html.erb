@@ -1,0 +1,13 @@
+<div class="col-12">
+  <h1>My Bookings</h1>
+  </div>
+</div>
+
+<table class="table">
+  <% user_bookings = current_user.bookings %>
+  <% user_bookings.each do |booking|%>
+  <%= rocket.name %>
+  <%= booking.booking_start_date %>
+  <%= booking.booking_end_date %>
+  <% end %>
+</table>
