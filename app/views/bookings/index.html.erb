@@ -11,3 +11,17 @@
   <%= booking.booking_end_date %>
   <% end %>
 </table>
+
+<div class="col-12">
+  <h1>My Rockets</h1>
+  </div>
+</div>
+
+<table class="table">
+  <% user_rockets = current_user.rockets %>
+  <% user_rockets.each do |rocket|%>
+  <%= rocket.name %>
+  <%= rocket.price %>
+  <%= rocket.capacity %>
+  <% end %>
+</table>
