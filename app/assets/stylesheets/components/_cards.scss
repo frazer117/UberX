@@ -1,0 +1,39 @@
+.rocket-card {
+    overflow: hidden;
+    height: 120px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+.rocket-card-content {
+  margin: 5px 10px 5px 10px;
+}
+  
+  .card-product h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .rocket-basic-info {
+    h5 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .rocket-capacity-price {
+    display: flex;
+    // justify-content: space-between;
+
+    i {
+      font-size: 14px;
+    }
+  }
+  
