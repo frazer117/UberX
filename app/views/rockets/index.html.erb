@@ -5,7 +5,6 @@
     </div>
   </div>
 
-
 <div id="map" class="map"
   style="width: 100%; height: 600px;"
   data-markers="<%= @markers.to_json %>"
@@ -40,47 +39,10 @@
             </div>
             <div class="rocket-actions">
               <%= link_to 'More info', rocket_path(rocket) %>
-            </div>   
+            </div>
          </div>
        </div>
       <% end %>
     </div>
   </div>
 </div>
-
-
-
-  <%# <div class="row">
-    <% @rockets.each do |rocket| %>
-      <%# <div class="col-4">
-        <div class="rocket-card">
-          <div class="rocket-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path(rocket.photo.key) if rocket.photo.attached? %>
-            <%# <div class="rocket-card-content">
-              <div class="rocket-card-title">
-                <%# <h4><%= rocket.name</h4> %>
-              <%# </div>
-              <%# <p><%= rocket.description</p> %>
-              <%# <div class="flex">
-                <div class="flex"> %>
-                  <%# <i class="material-icons mr-2">Capacity</i><span><%= rocket.capacity</span> %>
-                <%# </div> %>
-                <%# <div class="flex ml-3"> %>
-                  <%# <i class="material-icons mr-2">£</i> <%= rocket.price %>
-                <%# </div> %>
-              <%# </div> %>
-            <%# </div> %>
-          <%# </div> %>
-          <%# <div class="rocket-card-actions"> %>
-            <%# <%= link_to 'More info', rocket_path(rocket) %>
-            <%# <%= link_to 'Edit', edit_rocket_path(rocket), class: 'ml-3 text-warning' %>
-            <%# <%= link_to "Remove", rocket_path(rocket),
-                method: :delete,
-                data: { confirm: "Are you sure?" },
-                class: 'ml-3 text-danger'
-            %>
-          <%# </div> %>
-        <%# </div> %>
-      <%# </div> %>
-    <%# <% end %>
-  <%# </div> %>
-<%# </div> %>

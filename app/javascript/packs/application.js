@@ -7,8 +7,8 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-// import flatpickr from "flatpickr"
-// import { bookingValidation } from "plugins/init_flatpickr.js"
+import { initMapbox } from '../plugins/init_mapbox';
+
 
 Rails.start()
 Turbolinks.start()
@@ -31,24 +31,6 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
 });
 
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
-
-const initMapbox = () => {
-  const mapElement = document.getElementById('map');
-
-  if (mapElement) { // only build a map if there's a div#map to inject into
-    mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
-    const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
-    });
-  }
-};
-
-export { initMapbox };
-
-import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();

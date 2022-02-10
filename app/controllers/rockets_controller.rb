@@ -7,9 +7,8 @@ before_action :set_rocket, only: [:show, :update, :edit, :destroy]
     @markers = @rockets.geocoded.map do |rocket|
       {
         lat: rocket.latitude,
-        lng: rocket.longitude
+        lng: rocket.longitude,
         info_window: render_to_string(partial: "info_window", locals: { rocket: rocket }),
-
         image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
     end
