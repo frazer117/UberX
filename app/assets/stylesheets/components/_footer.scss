@@ -1,5 +1,5 @@
 .footer {
-    background: #F4F4F4;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -7,18 +7,22 @@
     padding: 0px 50px;
     margin-top: 25px;
     color: rgba(0,0,0,0.3);
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   .footer-links {
     display: flex;
     align-items: center;
+    font-size: 10px
+
   }
   .footer-links a {
     // color: black;
-    color: #7996a8;
+    color: black;
     opacity: 0.7;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px;
     padding: 0px 10px;
+
   }
   .footer-links a:hover {
     opacity: 1;
@@ -28,8 +32,10 @@
     color: black;
     opacity: 0.5;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
     padding: 0px 10px;
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   }
 
   .footer-copyrights a:hover {
