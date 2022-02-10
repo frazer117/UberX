@@ -14,15 +14,24 @@
 <div class="row">
     <div class="col">
   <div class="row">
-    <div class="search">
-      <% if @query %>
-        <p>You searched for <strong><%= @query %></strong>. We found <%= @rockets.count %> rockets out of our <%= Rocket.count %> on our website.</p>
-      <% else %>
-        <p>All <%= Rocket.count %> rockets.</p>
+    <%# <div class="search"> %>
+      <%= form_tag rockets_path, method: :get do %>
+        <div class="search-form-control form-group">
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a rocket"
+          %>
+          <%= submit_tag "Search", class: "btn btn-ghost" %>
       <% end %>
     </div>
   </div>
-
+      
+      <%# <% if @query %>
+        <%# <p>You searched for <strong><%= @query</strong>. We found <%= @rockets.count rockets out of our <%= Rocket.count on our website.</p> %>
+      <%# <% else
+        <%# <p>All <%= Rocket.count rockets.</p> %>
+      <%# <% end %>
   <div class="index-body">
     <div class="cards">
       <% @rockets.each do |rocket| %>
