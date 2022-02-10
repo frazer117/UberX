@@ -1,6 +1,11 @@
-<%= simple_form_for [rocket, booking] do |f| %>
-  <%= f.input :booking_start_date %>
-  <%= f.input :booking_end_date %>
-  <%= f.input :group_size %>
-  <%= f.submit %>
-<% end %>
+<%# <div  class="form-booking" id='rocket-booking-dates' data-unavailable="<%= @rocket.unavailable_dates.to_json %>">
+    <%# <% if current_user.id != @rocket.user_id  %>
+      <div class="form-booking">
+        <%= simple_form_for [rocket, booking] do |f| %>
+          <%= f.input :booking_start_date %>
+          <%= f.input :booking_end_date %>
+          <%= f.input :group_size, class: 'form-booking-font' %>
+          <%= f.submit class: 'btn btn-ghost-booking' %>
+        <% end %>
+    <%# <% end %>
+      </div>

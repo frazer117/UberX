@@ -1,27 +1,128 @@
 // Specific CSS for your home-page
+.page-container {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://res.cloudinary.com/dajifvnn5/image/upload/v1644231875/Galaxy_2_x1mycz.jpg");
+  background-size: cover;
+  background-position: center;
+  object-fit: contain;
+}
+
+.banner_inner_content {
+  padding-top: 40px;
+  padding-left: 30px
+}
+
+.btn-flat {
+  color: black;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #ddc01e;
+  transition: background 0.3s ease;
+  font-weight: bolder;
+
+  &:hover {
+    background: #7996a8;
+    color: white;
+  }
+}
 
 .funny {
-  background-color: $white;
   text-align: center;
+  padding: 40px;
 
   &__heading {
+    color: white;
     font-size: 14px;
     font-weight: bolder;
     letter-spacing: 2px;
   }
 
   &__text {
-    font-size: 16px;
-    color: gray;
+    font-size: 14px;
+    color: white;
     font-weight: 100;
   }
 }
 
-.home-icons {
-  font-size: 30px;
+.cards-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
 
-.home-icon-cap {
-  height: 35px;
+.card-home {
+  justify-content: top;
+  align-items: center;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 7px #7996a8;
+}
 
+.card-title-home {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home-icon-price {
+  font-size: 30px;
+  color: #ddc01e;
+  // opacity: 0.5;
+}
+
+.home-icon-alien {
+  font-size: 30px;
+  color: #ddc01e;
+  // opacity: 0.5;
+}
+
+.home-icon-danger {
+  font-size: 30px;
+  color: #ddc01e;
+  // opacity: 0.5;
+}
+
+.banner-home {
+  // background-size: cover;
+  // object-fit: contain;
+  // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://res.cloudinary.com/dajifvnn5/image/upload/v1644073202/UberX_front_image_nfk3o3.png");
+  // padding: 150px 0;
+  margin: 0px 50px 50px 50px;
+  // margin: 40px;
+  line-height: 60px;
+
+  h1 {
+    color: white;
+    font-size: 32px;
+  }
+  p {
+    color: white;
+    font-size: 20px;
+  }
+}
+
+// @media (max-width: 1200px) {
+//   /* For a screen < 1200px, this CSS will be read */
+//   .container {
+//     width: 900px;
+//   }
+// }
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
 }

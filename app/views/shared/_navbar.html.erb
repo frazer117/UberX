@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://www.shutterstock.com/image-photo/space-shuttle-near-earth-clouds-sky-1230117850" %>
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "https://res.cloudinary.com/dajifvnn5/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1644073202/UberX_front_image_nfk3o3.png" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,29 +11,36 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
+          <li class="nav-item">
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
-          <li class="nav-item active">
-            <%= link_to "All Rockets!", rockets_path, class: "nav-link" %>
+          <li class="nav-item">
+            <%= link_to "All Rockets", rockets_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Add Rocket", new_rocket_path(@rocket), class: "nav-link" %>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <%= link_to "My Account", bookings_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://www.shutterstock.com/image-vector/cute-astronaut-working-on-laptop-cartoon-1824301253", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <%= image_tag "https://res.cloudinary.com/dajifvnn5/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1644073202/UberX_front_image_nfk3o3.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%# <%= @user.email, class: "dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%# <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%# <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
         <% else %>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Home", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "All Rockets", rockets_path, class: "nav-link" %>
           </li>
         <% end %>
       </ul>

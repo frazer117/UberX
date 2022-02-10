@@ -1,9 +1,10 @@
-<div class="container mt-3">
+<div class="container">
   <div class="row">
-    <div class="col-12">
+    <div class="title">
       <h1>Rocket Ships</h1>
     </div>
   </div>
+
 
 <div id="map" class="map"
   style="width: 100%; height: 600px;"
@@ -13,6 +14,8 @@
 
 <div class="row">
     <div class="col">
+  <div class="row">
+    <div class="search">
       <% if @query %>
         <p>You searched for <strong><%= @query %></strong>. We found <%= @rockets.count %> rockets out of our <%= Rocket.count %> on our website.</p>
       <% else %>
@@ -21,36 +24,63 @@
     </div>
   </div>
 
-  <div class="row">
-    <% @rockets.each do |rocket| %>
-      <div class="col-4">
+  <div class="index-body">
+    <div class="cards">
+      <% @rockets.each do |rocket| %>
         <div class="rocket-card">
-          <%# <div class="flat-card-image" style="background-image: url('<%= flat.picture_url %>
+          <%= cl_image_tag rocket.photo.key, height: 120, width: 120 if rocket.photo.attached? %>
           <div class="rocket-card-content">
-            <div class="rocket-card-title">
-              <h4><%= rocket.name %></h4>
+            <div class="rocket-basic-info">
+              <h5><%= rocket.name %></h5>
+              <p><%= rocket.description %></p>
             </div>
-            <p><%= rocket.description %></p>
-            <div class="flex">
-              <div class="flex">
-                <i class="material-icons mr-2">Capacity</i><span><%= rocket.capacity %></span>
-              </div>
-              <div class="flex ml-3">
-                <i class="material-icons mr-2">£</i> <%= rocket.price %>
-              </div>
+            <div class="rocket-capacity-price">
+              <i class="material-icons mr-2">Capacity</i><span><%= rocket.capacity %></span>
+              <i class="material-icons mr-2">£</i><%= rocket.price %>
             </div>
-          </div>
-          <div class="rocket-card-actions">
-            <%= link_to 'More info', rocket_path(rocket) %>
-            <%= link_to 'Edit', edit_rocket_path(rocket), class: 'ml-3 text-warning' %>
-            <%= link_to "Remove", rocket_path(rocket),
+            <div class="rocket-actions">
+              <%= link_to 'More info', rocket_path(rocket) %>
+            </div>   
+         </div>
+       </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+  <%# <div class="row">
+    <% @rockets.each do |rocket| %>
+      <%# <div class="col-4">
+        <div class="rocket-card">
+          <div class="rocket-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path(rocket.photo.key) if rocket.photo.attached? %>
+            <%# <div class="rocket-card-content">
+              <div class="rocket-card-title">
+                <%# <h4><%= rocket.name</h4> %>
+              <%# </div>
+              <%# <p><%= rocket.description</p> %>
+              <%# <div class="flex">
+                <div class="flex"> %>
+                  <%# <i class="material-icons mr-2">Capacity</i><span><%= rocket.capacity</span> %>
+                <%# </div> %>
+                <%# <div class="flex ml-3"> %>
+                  <%# <i class="material-icons mr-2">£</i> <%= rocket.price %>
+                <%# </div> %>
+              <%# </div> %>
+            <%# </div> %>
+          <%# </div> %>
+          <%# <div class="rocket-card-actions"> %>
+            <%# <%= link_to 'More info', rocket_path(rocket) %>
+            <%# <%= link_to 'Edit', edit_rocket_path(rocket), class: 'ml-3 text-warning' %>
+            <%# <%= link_to "Remove", rocket_path(rocket),
                 method: :delete,
                 data: { confirm: "Are you sure?" },
                 class: 'ml-3 text-danger'
             %>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
+          <%# </div> %>
+        <%# </div> %>
+      <%# </div> %>
+    <%# <% end %>
+  <%# </div> %>
+<%# </div> %>

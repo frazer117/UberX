@@ -57,6 +57,6 @@ private
   end
 
   def rocket_params
-    params.require(:rocket).permit(:name, :description, :price, :capacity, :range, :power, :is_available)
+    params.require(:rocket).permit(:name, :description, :price, :capacity, :range, :power, :is_available, :photo)
   end
 end
