@@ -1,0 +1,33 @@
+.bookings-table {
+    margin: 32px 0;
+    justify-self: center;
+    align-self: start;
+    background-color: white;
+    border-radius: 6px;
+    padding: 16px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #0E0000;
+    /* background-color: transparent; */
+}
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-striped-color: #0E0000;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #0E0000;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #0E0000;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #0E0000;
+    vertical-align: top;
+    border-color: #dee2e6;
+}
+
+.table {
+    border-collapse: collapse;
+}
