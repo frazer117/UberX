@@ -2,6 +2,7 @@
 .page-container {
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://res.cloudinary.com/dajifvnn5/image/upload/v1644231875/Galaxy_2_x1mycz.jpg");
   background-size: cover;
+  background-position: center;
   object-fit: contain;
 }
 
@@ -16,6 +17,7 @@
   border-radius: 4px;
   background: #ddc01e;
   transition: background 0.3s ease;
+  font-weight: bolder;
 
   &:hover {
     background: #7996a8;
@@ -78,7 +80,7 @@
   // opacity: 0.5;
 }
 
-.banner {
+.banner-home {
   // background-size: cover;
   // object-fit: contain;
   // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://res.cloudinary.com/dajifvnn5/image/upload/v1644073202/UberX_front_image_nfk3o3.png");
@@ -93,9 +95,16 @@
   }
   p {
     color: white;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
+
+// @media (max-width: 1200px) {
+//   /* For a screen < 1200px, this CSS will be read */
+//   .container {
+//     width: 900px;
+//   }
+// }
 
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
