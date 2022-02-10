@@ -7,8 +7,8 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-// import flatpickr from "flatpickr"
-// import { bookingValidation } from "plugins/init_flatpickr.js"
+import { initMapbox } from '../plugins/init_mapbox';
+
 
 Rails.start()
 Turbolinks.start()
@@ -30,3 +30,8 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
