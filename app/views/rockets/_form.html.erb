@@ -1,10 +1,12 @@
-<%= simple_form_for @rocket do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :capacity %>
-  <%= f.input :range %>
-  <%= f.input :power %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<%# <div class="form-rocket"> %>
+  <%= simple_form_for @rocket do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :capacity %>
+    <%= f.input :range %>
+    <%= f.input :power %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+<%# </div> %>
