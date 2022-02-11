@@ -3,7 +3,18 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 before_action :set_rocket, only: [:show, :update, :edit, :destroy]
 
   def index
-    @rockets = Rocket.all
+    if params[:query].present?
+      @rockets = Rocket.global_search(params[:query])
+    else
+      @rockets = Rocket.all
+      @markers = @rockets.geocoded.map do |rocket|
+      {
+        lat: rocket.latitude,
+        lng: rocket.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { rocket: rocket }),
+        image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+      }
+    end
   end
 
   def show
