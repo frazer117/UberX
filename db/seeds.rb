@@ -18,20 +18,7 @@ user = User.create!(
   password: 'password-2021'
 )
 
-# rocket = Rocket.new(
-#   name: 'Falcon 1',
-#   user_id: user.id,
-#   description: 'Reusable two-stage rocket ideal for quick weekend getaways to the Moon and Mars. Stylish interior and sleek exterior design. Also comes with home cinema and cupholders.',
-#   price: 750000,
-#   capacity: 4,
-#   range: 400,
-#   power: 75000,
-#   address: Stockbridge, SO20 8DY, England
-#   is_available: true)
-
-# rocket.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-
-Rocket.create!(
+rocket = Rocket.new(
   name: 'Falcon 1',
   user: User.last,
   description: 'Reusable two-stage rocket ideal for quick weekend getaways to the Moon and Mars. Stylish interior and sleek exterior design. Also comes with home cinema and cupholders.',
@@ -39,23 +26,14 @@ Rocket.create!(
   capacity: 4,
   range: 400,
   power: 75000,
-  address: 'London',
+  address: 'Stockbridge, SO20 8DY, England',
+  is_available: true)
 
-  is_available: true
-)
+file = URI.open('https://res.cloudinary.com/dajifvnn5/image/upload/v1644409429/rocket_image_tpd90z.jpg')
+rocket.photo.attach(io: file, filename: 'rocket_image_tpd90z.jpg', content_type: 'image/jpg')
 
-Rocket.create!(
-  name: 'Massive Thruster',
-  user: User.last,
-  description: 'Ideal for reaching the outter solar system for that long summer vacation.',
-  price: 1950000,
-  capacity: 6,
-  range: 800,
-  power: 25000,
-  address: 'Sydney',
+rocket.save
 
-  is_available: true
-)
 
 # Rocket.create!(
 #   name: 'Falcon 1',
