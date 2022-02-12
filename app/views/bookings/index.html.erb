@@ -11,7 +11,7 @@
           <th class="title-text"> End Date </th>
           </tr>
           <% user_bookings = current_user.bookings %>
-          <% user_bookings.each do |booking|%>]
+          <% user_bookings.each do |booking|%>
           <tr>
           <th class="title-text"> <%= link_to booking.rocket.name, rocket_path(booking.rocket) %> </th>
           <th class="title-text"> <%= booking.booking_start_date %> </th>
@@ -23,16 +23,17 @@
 
       <div class="my-rockets">
       <h2> My Rockets</h2>
-        <div class="rocket-list">
+        <div class="rocket-cards">
           <% user_rockets = current_user.rockets %>
           <% user_rockets.each do |rocket| %>
             <div class="rocket-card">
-              <%= cl_image_tag rocket.photo.key, height: 120, width: 120 if rocket.photo.attached? %>
+              <%= cl_image_tag rocket.photo.key, height: 120, width: 150 if rocket.photo.attached? %>
               <div class="rocket-card-content">
                 <div class="rocket-basic-info">
                   <h5><%= rocket.name %></h5>
-                  <p><%= rocket.description %></p>
+                  <h5><%= rocket.address %></h5>
                 </div>
+                <p><%= rocket.description %></p>
                 <div class="rocket-capacity-price">
                   <i class="material-icons mr-2">Capacity</i><span><%= rocket.capacity%> </span>
                   <i class="material-icons mr-2">£</i><%= rocket.price %>
