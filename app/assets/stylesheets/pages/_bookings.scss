@@ -2,7 +2,7 @@
     margin: 32px 0;
     justify-self: center;
     align-self: start;
-    background-color: white;
+    // background-color: white;
     border-radius: 6px;
     padding: 16px;
 }
@@ -30,4 +30,16 @@
 
 .table {
     border-collapse: collapse;
+}
+
+.rocket-card {
+  margin-bottom: 10px;
+}
+
+.rocket-basic-info {
+  justify-content: space-evenly;
+}
+
+.rocket-capacity-price {
+  justify-content: space-evenly;
 }
