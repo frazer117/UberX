@@ -1,22 +1,21 @@
-
 <main>
-  <div class="container"
+  <div class="container booking">
     <div class="row justify-content-center">
     <div class="col-8 sol-sm-8 col-lg-8">
-      <h1>My Bookings</h1>
+      <h2>My Bookings</h2>
       <div class="bookings-table">
         <table class="table">
           <tr>
-          <th> Rocket </th>
-          <th> Booking Start Date </th>
-          <th> Booking End Date </th>
+          <th class="title-text"> Rocket </th>
+          <th class="title-text"> Start Date </th>
+          <th class="title-text"> End Date </th>
           </tr>
           <% user_bookings = current_user.bookings %>
           <% user_bookings.each do |booking|%>]
           <tr>
-          <th> <%= link_to booking.rocket.name, rocket_path(booking.rocket) %> </th>
-          <th> <%= booking.booking_start_date %> </th>
-          <th> <%= booking.booking_end_date %> </th>
+          <th class="title-text"> <%= link_to booking.rocket.name, rocket_path(booking.rocket) %> </th>
+          <th class="title-text"> <%= booking.booking_start_date %> </th>
+          <th class="title-text"> <%= booking.booking_end_date %> </th>
           </tr>
           <% end %>
         </table>
@@ -37,21 +36,17 @@
                 <div class="rocket-capacity-price">
                   <i class="material-icons mr-2">Capacity</i><span><%= rocket.capacity%> </span>
                   <i class="material-icons mr-2">£</i><%= rocket.price %>
+                  <i class="material-icons mr-2">Range: </i><%= rocket.range %>
+                  <i class="material-icons mr-2">Power: </i><%= rocket.power %>
                 </div>
                 <div class="rocket-actions">
-                  <%= link_to 'Step Inside', rocket_path(rocket) %>
+                  <%= link_to 'Edit', edit_rocket_path(rocket), class: 'ml-3 text-warning' %>
+                  <%= link_to "Remove", rocket_path(rocket), method: :delete, data: { confirm: "Are you sure?" }, class: 'ml-3 text-danger' %>
                 </div>
             </div>
           </div>
           <% end %>
         </div>
       </div>
-
-
-
-
-
-
-  </div>
-
+    </div>
 </main>

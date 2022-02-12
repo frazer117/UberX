@@ -1,18 +1,20 @@
 class RocketsController < ApplicationController
-skip_before_action :authenticate_user!, only: [:index, :show]
-before_action :set_rocket, only: [:show, :update, :edit, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_rocket, only: [:show, :update, :edit, :destroy]
 
   def index
     if params[:query].present?
       @rockets = Rocket.global_search(params[:query])
     else
       @rockets = Rocket.all
-      @markers = @rockets.geocoded.map do |rocket|
+    end
+    # @rockets = Rocket.where.not(latitude: nil, longitude: nil)
+    @markers = @rockets.geocoded.map do |rocket|
       {
         lat: rocket.latitude,
         lng: rocket.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { rocket: rocket }),
-        image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+        info_window: render_to_string(partial: "/rockets/mapbox", locals: { rocket: rocket }),
+        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
     end
   end
@@ -49,7 +51,7 @@ before_action :set_rocket, only: [:show, :update, :edit, :destroy]
 
   def destroy
     @rocket.destroy
-    redirect_to rockets_path
+    redirect_to bookings_path
   end
 
 private
@@ -59,6 +61,6 @@ private
   end
 
   def rocket_params
-    params.require(:rocket).permit(:name, :description, :price, :capacity, :range, :power, :is_available, :photo)
+    params.require(:rocket).permit(:name, :description, :price, :capacity, :range, :power, :address, :is_available, :photo)
   end
 end
