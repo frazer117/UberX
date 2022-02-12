@@ -11,7 +11,7 @@
           <th class="title-text"> End Date </th>
           </tr>
           <% user_bookings = current_user.bookings %>
-          <% user_bookings.each do |booking|%>]
+          <% user_bookings.each do |booking|%>
           <tr>
           <th class="title-text"> <%= link_to booking.rocket.name, rocket_path(booking.rocket) %> </th>
           <th class="title-text"> <%= booking.booking_start_date %> </th>

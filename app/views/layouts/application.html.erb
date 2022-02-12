@@ -12,7 +12,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <%= stylesheet_pack_tag 'application' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <%# <%= stylesheet_pack_tag 'map'%>
+    <%= stylesheet_pack_tag 'map'%>
   </head>
 
   <body>
@@ -22,7 +22,7 @@
     <p class="alert"><%= alert %></p>
     <%= yield %>
     <%= render 'shared/footer' %>
-    <%# <%= javascript_pack_tag 'map' %>
-    <%# <%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag 'map' %>
+    <%= javascript_pack_tag 'application' %>
   </body>
 </html>
