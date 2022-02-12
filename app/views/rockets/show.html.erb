@@ -4,8 +4,8 @@
   <div class="row">
     <div class="rocket-info col-6">
       <div class="rocket-show-card">
-        <h5><%= @rocket.name %></h5>
-        <p>Address: <%= @rocket.address %></p>
+        <h5><b><%= @rocket.name %></b></h5>
+        <p>Rocket launch site: <%= @rocket.address %></p>
         <%= cl_image_tag @rocket.photo.key, height: 300, width: 520 if @rocket.photo.attached? %>
       </div>
       <div class="rocket-show-card">
@@ -22,12 +22,12 @@
         <br>
         <br>
         <%# <i class="fa-solid fa-users"></i><%= @rocket.capacity %>
-        <p>Capacity: <%= @rocket.capacity %> people</p>
+        <p><b>Capacity: </b><%= @rocket.capacity %> humans</p>
         <i class="fa-solid fa-circle-dollar"></i>
-        <p>Price: £<%= @rocket.price %> per day</p>
-        <p>Range: <%= @rocket.range %></p>
-        <p>Power: <%= @rocket.power %></p>
-      </div> 
+        <p><b>Price:</b> £<%= @rocket.price %> / day</p>
+        <p><b>Range: </b><%= @rocket.range %> light years</p>
+        <p><b>Power: </b><%= @rocket.power %> horses</p>
+      </div>
     </div>
 
     <div class="booking col-3">

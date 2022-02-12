@@ -3,6 +3,7 @@
   background-position: center;
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://res.cloudinary.com/dajifvnn5/image/upload/v1644418652/rocket_background_4_vdivyb.jpg");
   padding: 40px 0;
+  font-family: "Aktiv Grotesk", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .row.rockets {
@@ -14,9 +15,9 @@
 
 .row.rockets-search {
   margin: 0px 20px 0px 20px;
-  
+
   .search {
-    margin-top: 60px;
+    margin-top: 40px;
     padding-bottom: 0px;
   }
 }
