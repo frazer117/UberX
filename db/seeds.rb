@@ -57,6 +57,32 @@ Rocket.create!(
   is_available: true
 )
 
+Rocket.create!(
+  name: 'Falcon 1',
+  user: User.last,
+  description: 'Reusable two-stage rocket ideal for quick weekend getaways to the Moon and Mars. Stylish interior and sleek exterior design. Also comes with home cinema and cupholders.',
+  price: 750000,
+  capacity: 4,
+  range: 400,
+  power: 75000,
+  address: 'London',
+
+  is_available: true
+)
+
+Rocket.create!(
+  name: 'Challenger',
+  user: User.last,
+  description: 'Reusable two-stage rocket ideal for quick weekend getaways to the Moon and Mars. Stylish interior and sleek exterior design. Also comes with home cinema and cupholders.',
+  price: 750000,
+  capacity: 4,
+  range: 400,
+  power: 75000,
+  address: 'New York',
+
+  is_available: true
+)
+
 # Rocket.create!(
 #   name: 'Falcon 1',
 #   user_id: user.id,

@@ -23,7 +23,7 @@
 
       <div class="my-rockets">
       <h2> My Rockets</h2>
-        <div class="rocket-cards">
+        <div class="rocket-cards row justify-content-between">
           <% user_rockets = current_user.rockets %>
           <% user_rockets.each do |rocket| %>
             <div class="rocket-card">
