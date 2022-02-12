@@ -2,20 +2,27 @@
 .page-container {
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://res.cloudinary.com/dajifvnn5/image/upload/v1644231875/Galaxy_2_x1mycz.jpg");
   background-size: cover;
+  background-position: bottom;
   object-fit: contain;
 }
 
 .banner_inner_content {
   padding-top: 40px;
-  padding-left: 30px
+  padding-left: 30px;
+  // padding-bottom: 10px;
+
+  p {
+    font-size: 48px;
+  }
 }
 
 .btn-flat {
   color: black;
-  padding: 8px 24px;
-  border-radius: 4px;
+  padding: 10px 25px;
+  border-radius: 0px;
   background: #ddc01e;
   transition: background 0.3s ease;
+  font-weight: bolder;
 
   &:hover {
     background: #7996a8;
@@ -23,79 +30,61 @@
   }
 }
 
-.funny {
-  text-align: center;
-  padding: 40px;
+.row {
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
 
-  &__heading {
-    color: white;
-    font-size: 14px;
+.funny {
+   &__heading {
+    color: #e86299;;
+    font-size: 18px;
     font-weight: bolder;
     letter-spacing: 2px;
-  }
-
-  &__text {
-    font-size: 14px;
-    color: white;
-    font-weight: 100;
   }
 }
 
 .cards-home {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 50px;
+  margin-bottom: 25px;
 }
 
 .card-home {
-  justify-content: top;
-  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 10px 10px 10px 10px;
-  box-shadow: 10px 10px 7px #7996a8;
+  // box-shadow: 7px 7px 5px black
 }
 
-.card-title-home {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.home-icon-price {
-  font-size: 30px;
-  color: #ddc01e;
-  // opacity: 0.5;
-}
-
-.home-icon-alien {
-  font-size: 30px;
-  color: #ddc01e;
-  // opacity: 0.5;
-}
-
-.home-icon-danger {
-  font-size: 30px;
-  color: #ddc01e;
-  // opacity: 0.5;
-}
-
-.banner {
+.banner-home {
   // background-size: cover;
   // object-fit: contain;
   // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://res.cloudinary.com/dajifvnn5/image/upload/v1644073202/UberX_front_image_nfk3o3.png");
   // padding: 150px 0;
   margin: 0px 50px 50px 50px;
   // margin: 40px;
-  line-height: 60px;
+  line-height: 80px;
 
   h1 {
     color: white;
-    font-size: 32px;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: "Aktiv Grotesk", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
   p {
     color: white;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
+
+// @media (max-width: 1200px) {
+//   /* For a screen < 1200px, this CSS will be read */
+//   .container {
+//     width: 900px;
+//   }
+// }
 
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
