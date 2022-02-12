@@ -7,7 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+
+Booking.destroy_all
 Rocket.destroy_all
+User.destroy_all
 
 user = User.create!(
   email: 'frazer.gavin@gmail.com',
@@ -16,7 +20,7 @@ user = User.create!(
 
 rocket = Rocket.new(
   name: 'Falcon 1',
-  user_id: user.id,
+  user: User.last,
   description: 'Reusable two-stage rocket ideal for quick weekend getaways to the Moon and Mars. Stylish interior and sleek exterior design. Also comes with home cinema and cupholders.',
   price: 750000,
   capacity: 4,
@@ -29,6 +33,7 @@ file = URI.open('https://res.cloudinary.com/dajifvnn5/image/upload/v1644409429/r
 rocket.photo.attach(io: file, filename: 'rocket_image_tpd90z.jpg', content_type: 'image/jpg')
 
 rocket.save
+
 
 # Rocket.create!(
 #   name: 'Falcon 1',
