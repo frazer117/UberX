@@ -6,7 +6,8 @@
     <%= f.input :capacity %>
     <%= f.input :range %>
     <%= f.input :power %>
-    <%= f.input :photo, as: :file %>
+    <%= f.input :address %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.submit %>
   <% end %>
 <%# </div> %>

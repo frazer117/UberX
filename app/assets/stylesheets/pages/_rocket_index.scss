@@ -1,0 +1,22 @@
+.top-container {
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://res.cloudinary.com/dajifvnn5/image/upload/v1644418652/rocket_background_4_vdivyb.jpg");
+  padding: 40px 0;
+}
+
+.row.rockets {
+  margin: 0px 20px 40px 20px;
+  h2 {
+    color: white;
+    }
+}
+
+.row.rockets-search {
+  margin: 0px 20px 0px 20px;
+  
+  .search {
+    margin-top: 60px;
+    padding-bottom: 0px;
+  }
+}

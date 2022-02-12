@@ -1,3 +1,14 @@
+.rocket-show-card {
+   margin-bottom: 15px;
+}
+
+.rocket-cards {
+  display: grid;
+  // grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+}
+
 .rocket-card {
     overflow: hidden;
     height: 120px;
@@ -5,7 +16,7 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    // margin-top: 10px;
   }
   
 .rocket-card-content {
