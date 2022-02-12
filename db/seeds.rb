@@ -44,6 +44,19 @@ Rocket.create!(
   is_available: true
 )
 
+Rocket.create!(
+  name: 'Massive Thruster',
+  user: User.last,
+  description: 'Ideal for reaching the outter solar system for that long summer vacation.',
+  price: 1950000,
+  capacity: 6,
+  range: 800,
+  power: 25000,
+  address: 'Sydney',
+
+  is_available: true
+)
+
 # Rocket.create!(
 #   name: 'Falcon 1',
 #   user_id: user.id,
