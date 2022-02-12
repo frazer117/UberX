@@ -17,15 +17,15 @@
 }
 
 .btn-flat {
-  color: black;
+  color: white;
   padding: 10px 25px;
   border-radius: 0px;
-  background: #ddc01e;
+  background: #A36959;
   transition: background 0.3s ease;
   font-weight: bolder;
 
   &:hover {
-    background: #7996a8;
+    background:#374E4A ;
     color: white;
   }
 }
@@ -37,16 +37,16 @@
 
 .funny {
    &__heading {
-    color: #e86299;;
+    color: #A36959;;
     font-size: 18px;
     font-weight: bolder;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
   }
 }
 
 .cards-home {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 50px;
   margin-bottom: 25px;
 }
@@ -54,7 +54,7 @@
 .card-home {
   justify-content: center;
   text-align: center;
-  padding: 10px 10px 10px 10px;
+  padding: 30px 30px 30px 30px;
   // box-shadow: 7px 7px 5px black
 }
 

@@ -30,11 +30,11 @@ class RocketsController < ApplicationController
   def create
     @rocket = Rocket.new(rocket_params)
     @rocket.user = current_user
-    if @rocket.save
+    @rocket.save!
       redirect_to rocket_path(@rocket)
-    else
-      render :new
-    end
+    # else
+    #   render :new
+    # end
   end
 
   def edit
