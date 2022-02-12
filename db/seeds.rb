@@ -7,8 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 
-file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-
 Rocket.destroy_all
 
 user = User.create!(
@@ -16,20 +14,7 @@ user = User.create!(
   password: 'password-2021'
 )
 
-# rocket = Rocket.new(
-#   name: 'Falcon 1',
-#   user_id: user.id,
-#   description: 'Reusable two-stage rocket ideal for quick weekend getaways to the Moon and Mars. Stylish interior and sleek exterior design. Also comes with home cinema and cupholders.',
-#   price: 750000,
-#   capacity: 4,
-#   range: 400,
-#   power: 75000,
-#   address: Stockbridge, SO20 8DY, England
-#   is_available: true)
-
-# rocket.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-
-Rocket.create!(
+rocket = Rocket.new(
   name: 'Falcon 1',
   user_id: user.id,
   description: 'Reusable two-stage rocket ideal for quick weekend getaways to the Moon and Mars. Stylish interior and sleek exterior design. Also comes with home cinema and cupholders.',
@@ -37,9 +22,13 @@ Rocket.create!(
   capacity: 4,
   range: 400,
   power: 75000,
-  address: Stockbridge, SO20 8DY, England
-  is_available: true
-)
+  address: 'Stockbridge, SO20 8DY, England',
+  is_available: true)
+
+file = URI.open('https://res.cloudinary.com/dajifvnn5/image/upload/v1644409429/rocket_image_tpd90z.jpg')
+rocket.photo.attach(io: file, filename: 'rocket_image_tpd90z.jpg', content_type: 'image/jpg')
+
+rocket.save
 
 # Rocket.create!(
 #   name: 'Falcon 1',
