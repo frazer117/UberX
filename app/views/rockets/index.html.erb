@@ -27,7 +27,7 @@
     <div class="col-6 rocket-cards">
       <% @rockets.each do |rocket| %>
         <div class="rocket-card">
-          <%= cl_image_tag rocket.photo.key, height: 120, width: 200 if rocket.photo.attached? %>
+          <%= cl_image_tag rocket.photo.key, height: 150, width: 200 if rocket.photo.attached? %>
           <div class="rocket-card-content">
             <div class="rocket-basic-info">
               <h5><%= rocket.name %></h5>
@@ -35,8 +35,8 @@
             </div>
 
             <div class="rocket-capacity-price">
-              <i class="material-icons mr-2">Capacity</i><span><%= rocket.capacity %></span>
-              <i class="material-icons mr-2">Daily rate £</i><%= rocket.price %>
+              <i class="material-icons mr-2">Capacity</i><%= rocket.capacity %>;
+              <i class="material-icons mr-2">    Daily rate £</i><%= rocket.price %>
             </div>
 
             <div class="rocket-actions">

@@ -12,7 +12,8 @@
 .rocket-card {
     overflow: hidden;
     height: 120px;
-    background: white;
+    background-color: white;
+    // background: #d39748;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
@@ -40,7 +41,7 @@
   }
 
   .rocket-capacity-price {
-    display: flex;
+    // display: flex;
     // justify-content: space-between;
 
     i {

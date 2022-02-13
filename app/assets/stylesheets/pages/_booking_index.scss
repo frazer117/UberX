@@ -9,9 +9,25 @@
 }
 
 .title-text {
-    color: white;
+  color: white;
+}
+
+.content-text {
+  color: white;
 }
 
 .my-rockets {
     margin-bottom: 25px;
 }
+
+.rocket-card {
+    height: 150px;
+}
+.rocket-card-content {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  p {
+    font-size: 14px;
+  }
+}
+
