@@ -77,5 +77,5 @@ rocket = Rocket.new(
 )
 
 file = URI.open('https://res.cloudinary.com/dajifvnn5/image/upload/v1644417653/rocket_6_ies050.jpg')
-rocket.photo.attach(io: file, filename: 'rocket_6_ies050.jpg', content_type: 'image/jpg')
+rocket.photo.attach(io: file, filename: 'rocket_6_ies050', content_type: 'image/jpg')
 rocket.save
